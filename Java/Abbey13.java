@@ -1,7 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ Problem: Code Abbey 13.
+ Description: calculate the weighted Sum of Digits, first by 
+ multiplying each digit by its decimal position, and adding each 
+ of those products together. 
+ URL: https://www.codeabbey.com/index/task_view/weighted-sum-of-digits
  */
 package abbey13;
 
@@ -25,7 +27,7 @@ public class Abbey13 {
     }
 
     public static String readFileIn() throws FileNotFoundException, IOException {
-        FileReader file = new FileReader("/Users/appleuprising/Google Drive/School/Computer Science/Code Abbey/Code Abbey Problem 013/testdata13.txt");
+        FileReader file = new FileReader("YourTextFileHere.txt"); //<-- Hardcode input data file path here 
         BufferedReader reader = new BufferedReader(file);
         String a = "";
         String strLines;
@@ -53,7 +55,7 @@ public class Abbey13 {
     }
 
     public static String returnAnswer(String data) {
-        String intermediate = data;
+        String intermediate = data; 
         String answer = "";
         String[] splitLine = intermediate.split(" ");
         for (int i = 0; i < splitLine.length; i++) {
@@ -67,7 +69,7 @@ public class Abbey13 {
         String answer;
         int solution = 0;
         for (int i = 0; i < data.length; i++) {
-            solution = solution + ((Integer.parseInt(data[i])) * (i + 1));
+            solution = solution + ((Integer.parseInt(data[i])) * (i + 1)); // Where the calculation takes place
         }
         return (String.valueOf(solution));
     }
